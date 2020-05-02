@@ -12,6 +12,8 @@ calefaccion <- index(lima)$alt %in% c('erc', 'er') # solo calefaccion
 
 # costos de operacion de instalacion y costos de opracion solo son relevantes
 # para el sistema doble
+ ## ich: costos de instalacion
+ ## och: costos operativos
 
 
 lima$icca[!sitema_doble] <- 0 # instalacion 
@@ -41,3 +43,11 @@ summary(nl2)
 nl3 <- update(nl, nests=list(n1 = c('gcc', 'ecc', 'erc'), n2 = c('hpc'),
                              n3 = c('gc', 'ec', 'er')))
 summary(nl3)
+
+str_t <- function(x, y){
+    stargazer(x, type = ifelse(y == "t", "text", "latex"), header = FALSE)
+}
+
+mo <- c(nl, nl2, nl3)
+
+stargazer(nl, nl2, nl3, type = 'text', header = FALSE, dep.var.labels = "Nudos", single.row=TRUE)

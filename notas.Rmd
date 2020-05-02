@@ -20,6 +20,8 @@ Mi teclado esta en ingles^[Por lo que existira omisiones de tildes o caracteres 
 
 Algunas correciones se puede hacer en: [https://github.com/TJhon/notas-de-clase/blob/master/notas.Rmd]
 
+Aplicacion Osinergmin^[los resultados del modelo estan siendo revisados por mi profesor]
+
 
 # Cuestiones Generales
 
@@ -151,11 +153,10 @@ Nota^[Osiptel fue el primero en aplicar este modelo, y me aburre usar excel]
 
 ## Otros modelos 
 
-Tasa de retorno - sobrecapitalizacion
-costos incrementales - servicios adicionales 
-Empresa modelo eficiente - empresa teorica(osinergmin)
-
-Disposicion a pagar
+- Tasa de retorno - sobrecapitalizacion
+- costos incrementales - servicios adicionales 
+- Empresa modelo eficiente - empresa teorica(osinergmin)
+- Disposicion a pagar
 
 
 
@@ -182,7 +183,7 @@ knitr::knit_hooks$set(mysize = function(before, options, envir) {
 knitr::opts_chunk$set(mysize = TRUE, size = "\\tiny")
 ```
 
-```{r, mysize = TRUE, size = "\\tiny", echo=FALSE}
+```{r, mysize = TRUE, size = "\\tiny", echo=FALSE, warning=FALSE, message=FALSE}
 library(tidyverse); library(stargazer); library(mlogit)
 # Sistema de calefaccion y refrigeracion 
 lima <- readRDS('dr/muestralima.rds')
@@ -224,10 +225,10 @@ stargazer(nl, nl2, nl3, type = 'latex', header = FALSE, dep.var.labels = "Elecci
 
 # Aplicacion osinerming
 
-Econometria bayesiana^[elemental segun mi profe]
+Econometria bayesiana^[Elemental segun mi profe]
 
 Los datos me fueron prestados 
-para poder actualizar los resultados^[Si mi profe me presta sus datos]
+para poder actualizar los resultados^[Si mi profe lo acepta]
 
 --- 
 
@@ -246,6 +247,8 @@ Escalera energetica Peru
 ### Hipotesis
 
 - Variables socioeconomicas y demograficas generan una influencia positiva en la eleccion del GLP como combustible prncipal
+
+---
 
 ### Modelo
 
