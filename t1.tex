@@ -1,0 +1,67 @@
+\usepackage[export]{adjustbox}
+\usepackage[spanish]{babel}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage[citations,footnotes,definitionLists,hashEnumerators,smartEllipses,tightLists=false,pipeTables,tableCaptions,hybrid]{markdown}
+
+\useoutertheme[subsection = false]{miniframes} % Alternatively: miniframes, infolines, split
+\usefonttheme{serif} %tipo de letra (Latex)
+\useinnertheme{circles} %navegacion
+
+\definecolor{UBCblue}{HTML}{003F00} % UBC Blue (primary)
+\definecolor{UBCgrey}{HTML}{003F00} % UBC Grey (secondary)
+
+\RequirePackage{ifthen} % package required
+
+\newboolean{sectiontoc}
+\setboolean{sectiontoc}{true} % default to true
+
+\AtBeginSection[]
+{
+    \ifthenelse{\boolean{sectiontoc}}{
+        \begin{frame}<beamer>{Desarrollo}
+        \tableofcontents[currentsection]
+        \end{frame}
+    }
+}
+
+\newcommand{\toclesssection}[1]{
+    \setboolean{sectiontoc}{false}
+    \section{#1}
+        \setboolean{sectiontoc}{true}
+    }
+    
+    \ifx\insertsubsection\empty
+    
+    
+    \setbeamercolor{palette primary}{bg=UBCblue,fg=white}
+    \setbeamercolor{palette secondary}{bg=white,fg=UBCblue}
+    \setbeamercolor{palette tertiary}{bg=UBCblue,fg=white}
+    \setbeamercolor{palette quaternary}{bg=UBCblue,fg=white}
+    \setbeamercolor{structure}{fg=UBCblue} % itemize, enumerate, etc
+    \setbeamercolor{section in toc}{fg=UBCblue} % TOC sections
+    \setbeamercolor{date in head/foot}{bg=white,fg=UBCblue}
+    \setbeamercolor{title in head/foot}{bg=white,fg=UBCblue}
+    
+    % Override palette coloring with secondary
+    \setbeamercolor{section in foot}{bg = white, fg=white}
+    \setbeamercolor{subsection in head}{fg=white}
+    \setbeamercolor{subsection in foot}{bg = white, fg=UBCblue}
+    
+    \setbeamerfont{title like}{shape=\scshape}
+    \setbeamerfont{frametitle}{shape=\scshape}
+    
+    
+    % cuando no hay ninifrmaes (guia arriba) \markdownSetup{rendererPrototypes={
+        % cuando no hay ninifrmaes (guia arriba)  link = {\href{#2}{#1}},
+            % cuando no hay ninifrmaes (guia arriba)  headingOne = {\section{#1}},
+                % cuando no hay ninifrmaes (guia arriba)  headingTwo = {\subsection{#1}},
+                    % cuando no hay ninifrmaes (guia arriba)  headingThree = {\begin{frame}\frametitle{#1}},
+                        % cuando no hay ninifrmaes (guia arriba)  headingFour = {\begin{block}{#1}},
+                            % cuando no hay ninifrmaes (guia arriba)  horizontalRule = {\end{block}}
+                            % cuando no hay ninifrmaes (guia arriba) }}

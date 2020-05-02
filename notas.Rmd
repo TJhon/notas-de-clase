@@ -1,0 +1,240 @@
+---
+title: "Apuntes de clases"
+subtitle: "Osingergmin"
+author: "Jhon Flores Rojas"
+date: "`r format(Sys.Date(), '%a %d %b, %Y')`"
+output:
+  beamer_presentation: 
+    colortheme: lily
+    highlight: kate
+    includes:
+      in_header: t1.tex
+    incremental: yes
+    slide_level: 2
+    theme: CambridgeUS
+---
+
+### Nota
+
+Mi teclado esta en ingles^[Por lo que existira omisiones de tildes o caracteres que solo existe en el teclado espanol]
+
+
+# Cuestiones General
+
+- Preoperativa 
+- Operativa []
+- 
+- Seguridad tecnica (2011)
+- Seguridad laboral - SUNAFIL
+- Seguridad Ambiental - OEFA
+
+- Economia de densidad
+- Integracion vertival
+
+# Sectores 
+
+## Hidrocarburos
+
+
+- Upstream (Exploracion, Produccion) `Derechos de lotes` ^[En general 10$ MM] - Monopolios legales
+- Midstream (Transporte, almacenamiento)  
+- DonwStream 
+  - Refinacion (Petroperu) - Monopolio Legal
+  - Comercializacion [Mayoristas, Plantas de abastecimiento]) Oligopolios
+
+## Gas Natural
+
+`Consorcio` Camisea, lotes 56 88 (82%) ^[GLN Enfriamiento del gas para transporte] 
+
+- Upstream (Exploracion, Produccion) `Derechos de lotes` {Comprobados, potenciales}
+- Midstream (Transporte, almacenamiento, distribucion) - Monopolios naturales
+- DonwStream 
+  - Comercializacion Centrales electricas, distribuidoras, clientes industriales (92%) [Minimo de conexiones- contraparte del estado]
+    - En inicios clientes asegurados, con precios decrecientes
+  
+## Electricidad
+
+
+- Economias a escala - Costos decrecientes
+- Clientes Libres (empresas industriales 0.2 MW)
+  - Las partes establecen un precio
+- Clientes regulados
+  - Tarifas 
+- Cargos, recargos , subenciones
+
+--- 
+
+### Generacion
+
+- Potencialmente Competetivia 
+- Entrada al menor costo
+  - Hidroelectricas, gas natural, hidrocarburo 
+
+--- 
+
+### Operacion del sistema 
+
+COES - Monopolio legal
+
+### Transimision
+
+Monopolio natural
+
+
+### Distribucion y Comercializacion
+
+Distribucion - Monopolio natural
+Comercializacion Minorista - Potencialmente competitiva^[Servicio al cliente]
+
+
+## Mineria
+
+| Inversiones proyectadas al 2020 fueron de 6.7$ MM 
+| Intensivas en capital
+| Proyecciones de precios a corto y mediano plazo
+
+- Exploracion - Libre 
+- Explotacion - Permisos legales
+- Plantas de beneficios (solo se aprovecha el 4% )
+- Transporte 
+
+
+# Modelos
+
+
+## Hotelling
+
+Royalty
+
+- Produccion 
+
+$$\int_{0}^{T}[PQ(1-\tau) - CT]e^{-rt} dt $$
+$${\dot{P (1-\tau) - c }}>= r$$ ^[$c$: costo marginal]
+
+Trayectoria optima, relacion con los precios
+
+---
+
+- Utilidades
+
+$$\int_{0}^{T[}[PQ - CT]](1-\tau)e^{-rt} dt $$
+
+
+$${\dot{(P  - c )(1-\tau)}} = r$$
+
+
+Reduce el valor del yacimiento, desincentiva animos de prospecciones
+
+
+
+
+## Precios tope
+
+$$\Pi = IT - CT $$ 
+
+Empresas ^[difereciales totales, divides, defines un factor de productividad, estableces relaciones diferenciales ], Economia ^[Lo mismo, restas con el de la empresa y se obtiene el factor de productividad]
+
+$$\dot{P} = \dot{P_E} - X $$
+
+$$X = -(Ip - Ip_E)   - (\dot{W} - \dot{W_E})$$
+
+Nota^[Osiptel fue el primero en aplicar este modelo, y me aburre usar excel]
+
+
+
+
+# Aplicacion 
+
+Econometria bayesiana^[elemental segun mi profe]
+
+Los datos me fueron prestados 
+para poder actualizar los resultados^[Con el permiso de mi profe :v]
+
+--- 
+
+Perdon^[Da flojera escribir todo] 
+
+### Titulo
+
+Escalera energetica Peru
+
+### Problema
+
+- Politicas de acceso a energia (GLP)
+  - FISE (subencions de los costos variables)
+  - Cocina Peru (kit de cocina GLP)
+  
+### Hipotesis
+
+- Variables socioeconomicas y demograficas generan una influencia positiva en la eleccion del GLP como combustible prncipal
+
+
+## Metodologia 
+
+Logit anidado, para analizar la buncion de probabilidad condicional de cada opcion disponible, la cual estara determinada por un conjunto de variables explicativas y parametros de respuesta. 
+
+
+---
+
+## Modelo 
+
+Expresion 
+
+$$
+P_{il} = P_{iT} * P{il|T} = \frac{\epsilon^{\frac{Vl}{\lambda}}[\sum_{k=1}^2\epsilon^{\frac{V_l}{\lambda}}]^{\lambda_T - 1}}
+{\sum_{k=1}^2[\epsilon^{\frac{V_l}{\lambda}}]^\lambda{_T} + \epsilon^{V_{GLP}}}
+$$
+
+El modelo a estimar
+$$
+\begin{aligned}
+V_{GLP} &= \alpha + \beta_0EduJH + \beta_1Zona  + \beta_2 INGpc + \\
+&\quad \beta_3P_{GLP} + \beta_4P_{lea} + \beta_5GenJH + \beta_6 EdadJH + e
+\end{aligned}
+$$
+
+Donde $\lambda_{T-1}$ medida de asociacion entre las alternativas disponibles, V_{GLP} nivel de utilidad al elegir GLP,  EduJH, EdadJH y GenJH representan el nivel edu-cativo, la edad y género del jefe del hogar, Zona identifica la ubicación geográfica, INGpc es el ingreso per cápita y P_{GLP} es el precio
+
+
+
+
+
+
+## Datos 
+
+Modulos 01, 02, 34
+
+```{r, mysize = TRUE, size = "\\tiny", echo=FALSE}
+knitr::knit_hooks$set(mysize = function(before, options, envir) { 
+  if (before) { 
+    return(options$size) 
+  } else { 
+    return("\\normalsize") 
+  } 
+}) 
+knitr::opts_chunk$set(mysize = TRUE, size = "\\tiny")
+```
+--- 
+
+```{r, warning=FALSE. }
+library(haven)
+library(tidyverse)
+read_dta("Datos/634-Modulo01/enaho01-2018-100.dta") %>% 
+    select(p1131:p1137, conglome, estrato,  vivienda,# combustible, cruce
+           p1171_02:p1171_09, p1171_16, # gasto 
+            -p1171_06) %>%  # velas no modelar 
+    saveRDS("dr/ena1.rds") # ahorrar 98% de espacio
+read_dta("Datos/634-Modulo02/enaho01-2018-200.dta") %>% 
+    select(p203, p203b, everything()) %>% # educacion 
+    select(estrato, p207, p208a, conglome, vivienda) %>% # zona, edad, genero
+    saveRDS("dr/ena2.rds")
+read_dta("Datos/634-Modulo34/sumaria-2018.dta") %>% 
+    select(ingbruhd, conglome, estrato, vivienda) %>%  # ingresos 
+    saveRDS("dr/s1.rds")
+read_dta("Datos/634-Modulo34/sumaria-2018-12g.dta")    %>% 
+    select(sig24, ingbruhd, conglome, estrato, vivienda) %>%  # gastos, ingresos
+    saveRDS("dr/s2.rds")
+```
+
+## Tratamiento 
+
