@@ -222,6 +222,8 @@ str_t
 stargazer(nl, nl2, nl3, type = 'latex', header = FALSE, dep.var.labels = "Elecciones", single.row=TRUE)
 ```
 
+Estimaciones con este tipo de modelos [https://www.sciencedirect.com/science/article/abs/pii/0047272774900036]
+
 
 # Aplicacion osinerming
 
