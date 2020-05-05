@@ -35,19 +35,23 @@ Aplicacion Osinergmin^[los resultados del modelo estan siendo revisados por mi p
   - Seguridad Ambiental - OEFA
 
 - Economia de densidad
-
-- Integracion vertival
+- Integracion  vertival
+- Mercados relevantes
+- Concetacion de mercados(Lerner)
 
 ---
-
+- Incetidumbre 
 - Informacion asimetrica
   - Informacion oculta
   - Accion oculta 
   - Renta informacional
+- Poder de mercado 
 
 - Monopolios (1 3 2) - (perfecta, clustering, autoseleccion)
-
-
+- Restricciones y fusiones verticales (Descuentos, clausulas de exclusividad) 
+  - Interbrand
+  - Intrabrand
+- Tierras raras
 
 # Sectores 
 
