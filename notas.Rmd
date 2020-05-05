@@ -27,7 +27,7 @@ Aplicacion Osinergmin^[los resultados del modelo estan siendo revisados por mi p
 
 - Superviciones
   - Preoperativa: revision de contratatos(no vinculante)
-  - Operativa: hacer que se cumpla el contrato
+  - Operativa: hacer cumplir el contrato
   
 - Juridiccion
   - Seguridad tecnica (2011)
@@ -37,6 +37,17 @@ Aplicacion Osinergmin^[los resultados del modelo estan siendo revisados por mi p
 - Economia de densidad
 
 - Integracion vertival
+
+---
+
+- Informacion asimetrica
+  - Informacion oculta
+  - Accion oculta 
+  - Renta informacional
+
+- Monopolios (1 3 2) - (perfecta, clustering, autoseleccion)
+
+
 
 # Sectores 
 
