@@ -291,7 +291,3 @@ Modulos 01, 02, 34
 
 ![Resultados](dr/resultados.PNG)
 
-
-## Fin
-
-![](https://media0.giphy.com/media/8m1uj5GejcsmI/giphy.gif?cid=ecf05e473a44141a8deb71ca51088ea169d5d57233ce3997&rid=giphy.gif)
