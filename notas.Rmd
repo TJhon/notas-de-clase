@@ -172,6 +172,7 @@ Nota^[Osiptel fue el primero en aplicar este modelo, y me aburre usar excel]
 - costos incrementales - servicios adicionales 
 - Empresa modelo eficiente - empresa teorica(osinergmin)
 - Disposicion a pagar
+- Otros^[Queria aplicar otros modelos, pero el tiempo de explicar seria muy amplio, si se desea ver los modelos revisar en Osinergmin, GPAE] 
 
 
 
@@ -291,3 +292,4 @@ Modulos 01, 02, 34
 
 ![Resultados](dr/resultados.PNG)
 
+## FIN
