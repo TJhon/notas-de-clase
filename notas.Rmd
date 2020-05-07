@@ -287,4 +287,7 @@ Donde $\lambda_{T-1}$ medida de asociacion entre las alternativas disponibles, V
 
 Modulos 01, 02, 34
 
+## Resultados
+
+![Resultados](dr/resultados.PNG)
 
